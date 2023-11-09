@@ -1,0 +1,4 @@
+@openzeppelin/=lib/openzeppelin-contracts/
+@balancerV2/=lib/balancer-v2-monorepo/pkg/
+ds-test/=lib/forge-std/lib/ds-test/src/
+std/=lib/forge-std/src/

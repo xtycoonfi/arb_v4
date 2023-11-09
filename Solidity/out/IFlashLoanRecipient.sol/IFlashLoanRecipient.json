@@ -1,0 +1,386 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20[]",
+          "name": "tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "feeAmounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "userData",
+          "type": "bytes"
+        }
+      ],
+      "name": "receiveFlashLoan",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "receiveFlashLoan(address[],uint256[],uint256[],bytes)": "f04f2707"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IERC20[]\",\"name\":\"tokens\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"feeAmounts\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"userData\",\"type\":\"bytes\"}],\"name\":\"receiveFlashLoan\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"receiveFlashLoan(address[],uint256[],uint256[],bytes)\":{\"details\":\"When `flashLoan` is called on the Vault, it invokes the `receiveFlashLoan` hook on the recipient. At the time of the call, the Vault will have transferred `amounts` for `tokens` to the recipient. Before this call returns, the recipient must have transferred `amounts` plus `feeAmounts` for each token back to the Vault, or else the entire flash loan will revert. `userData` is the same value passed in the `IVault.flashLoan` call.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol\":\"IFlashLoanRecipient\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol\":{\"keccak256\":\"0x3c415102b8b53a3efe0209b7fa4fd052a48b35a1df99e1b37572597d25030249\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8aac0d9f5ff03e0edeb07e1c400b78edea5948acff7e113ba52fd32f86cad72d\",\"dweb:/ipfs/Qmbh6C53fCjvjoHEVZHNadpRq5KZJzfHpDeR3qYfPgKvZt\"]},\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol\":{\"keccak256\":\"0xadcf6e9f8677de9ec51a1bbb419da349b7c0c17af8b8cddad85ee0e80107036e\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://e9b30c1b15e3d0990a4a343fac14d2263c4bae4c3bdbeb38489103b4f6f66c39\",\"dweb:/ipfs/QmeQjBDidkLAoq4nknwPPPmunSTvQEZ9shaAhPiJAPmbk6\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract IERC20[]",
+              "name": "tokens",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "amounts",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "feeAmounts",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "userData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "receiveFlashLoan"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "receiveFlashLoan(address[],uint256[],uint256[],bytes)": {
+            "details": "When `flashLoan` is called on the Vault, it invokes the `receiveFlashLoan` hook on the recipient. At the time of the call, the Vault will have transferred `amounts` for `tokens` to the recipient. Before this call returns, the recipient must have transferred `amounts` plus `feeAmounts` for each token back to the Vault, or else the entire flash loan will revert. `userData` is the same value passed in the `IVault.flashLoan` call."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/",
+        "@balancerV2/=lib/balancer-v2-monorepo/pkg/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "balancer-v2-monorepo/=lib/balancer-v2-monorepo/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        "std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol": "IFlashLoanRecipient"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol": {
+        "keccak256": "0x3c415102b8b53a3efe0209b7fa4fd052a48b35a1df99e1b37572597d25030249",
+        "urls": [
+          "bzz-raw://8aac0d9f5ff03e0edeb07e1c400b78edea5948acff7e113ba52fd32f86cad72d",
+          "dweb:/ipfs/Qmbh6C53fCjvjoHEVZHNadpRq5KZJzfHpDeR3qYfPgKvZt"
+        ],
+        "license": "MIT"
+      },
+      "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol": {
+        "keccak256": "0xadcf6e9f8677de9ec51a1bbb419da349b7c0c17af8b8cddad85ee0e80107036e",
+        "urls": [
+          "bzz-raw://e9b30c1b15e3d0990a4a343fac14d2263c4bae4c3bdbeb38489103b4f6f66c39",
+          "dweb:/ipfs/QmeQjBDidkLAoq4nknwPPPmunSTvQEZ9shaAhPiJAPmbk6"
+        ],
+        "license": "GPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol",
+    "id": 180,
+    "exportedSymbols": {
+      "IERC20": [
+        140
+      ],
+      "IFlashLoanRecipient": [
+        179
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "688:853:7",
+    "nodes": [
+      {
+        "id": 161,
+        "nodeType": "PragmaDirective",
+        "src": "688:31:7",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 162,
+        "nodeType": "ImportDirective",
+        "src": "773:51:7",
+        "nodes": [],
+        "absolutePath": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
+        "file": "../solidity-utils/openzeppelin/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 180,
+        "sourceUnit": 141,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 179,
+        "nodeType": "ContractDefinition",
+        "src": "826:714:7",
+        "nodes": [
+          {
+            "id": 178,
+            "nodeType": "FunctionDefinition",
+            "src": "1363:175:7",
+            "nodes": [],
+            "documentation": {
+              "id": 163,
+              "nodeType": "StructuredDocumentation",
+              "src": "862:496:7",
+              "text": " @dev When `flashLoan` is called on the Vault, it invokes the `receiveFlashLoan` hook on the recipient.\n At the time of the call, the Vault will have transferred `amounts` for `tokens` to the recipient. Before this\n call returns, the recipient must have transferred `amounts` plus `feeAmounts` for each token back to the\n Vault, or else the entire flash loan will revert.\n `userData` is the same value passed in the `IVault.flashLoan` call."
+            },
+            "functionSelector": "f04f2707",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveFlashLoan",
+            "nameLocation": "1372:16:7",
+            "parameters": {
+              "id": 176,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 167,
+                  "mutability": "mutable",
+                  "name": "tokens",
+                  "nameLocation": "1414:6:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "1398:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_contract$_IERC20_$140_$dyn_memory_ptr",
+                    "typeString": "contract IERC20[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 165,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 164,
+                        "name": "IERC20",
+                        "nameLocations": [
+                          "1398:6:7"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 140,
+                        "src": "1398:6:7"
+                      },
+                      "referencedDeclaration": 140,
+                      "src": "1398:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$140",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "id": 166,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1398:8:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_contract$_IERC20_$140_$dyn_storage_ptr",
+                      "typeString": "contract IERC20[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 170,
+                  "mutability": "mutable",
+                  "name": "amounts",
+                  "nameLocation": "1447:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "1430:24:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 168,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1430:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 169,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1430:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 173,
+                  "mutability": "mutable",
+                  "name": "feeAmounts",
+                  "nameLocation": "1481:10:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "1464:27:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 171,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1464:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 172,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1464:9:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 175,
+                  "mutability": "mutable",
+                  "name": "userData",
+                  "nameLocation": "1514:8:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 178,
+                  "src": "1501:21:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 174,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1501:5:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1388:140:7"
+            },
+            "returnParameters": {
+              "id": 177,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1537:0:7"
+            },
+            "scope": 179,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFlashLoanRecipient",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          179
+        ],
+        "name": "IFlashLoanRecipient",
+        "nameLocation": "836:19:7",
+        "scope": 180,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "GPL-3.0-or-later"
+  },
+  "id": 7
+}

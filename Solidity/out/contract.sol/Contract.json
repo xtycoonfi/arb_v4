@@ -1,0 +1,159 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220cf3706783ee6ecff7cd0c5a8a6c27ca82a901aef0ac5cca146107aeb366ffd8b64736f6c63430008150033",
+    "sourceMap": "60:56:15:-:0;;;85:29;;;;;;;;;;60:56;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080604052600080fdfea2646970667358221220cf3706783ee6ecff7cd0c5a8a6c27ca82a901aef0ac5cca146107aeb366ffd8b64736f6c63430008150033",
+    "sourceMap": "60:56:15:-:0;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/contract.sol\":\"Contract\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/=lib/openzeppelin-contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\"]},\"sources\":{\"src/contract.sol\":{\"keccak256\":\"0x7412c7752d3ffc6a124528ab9554c96edb9fe8f3eeb16dab0f9846d6c1786461\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fba825ca5c1735457ebe6853036dd82a9a17392e4eb3a101621a794a2bfb6bd0\",\"dweb:/ipfs/QmR9EzRQ1oGsSERdCGs9NopMCvvuEAtLrR2pW3ox3RDJsQ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        "std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/contract.sol": "Contract"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/contract.sol": {
+        "keccak256": "0x7412c7752d3ffc6a124528ab9554c96edb9fe8f3eeb16dab0f9846d6c1786461",
+        "urls": [
+          "bzz-raw://fba825ca5c1735457ebe6853036dd82a9a17392e4eb3a101621a794a2bfb6bd0",
+          "dweb:/ipfs/QmR9EzRQ1oGsSERdCGs9NopMCvvuEAtLrR2pW3ox3RDJsQ"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/contract.sol",
+    "id": 26474,
+    "exportedSymbols": {
+      "Contract": [
+        26473
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:84:15",
+    "nodes": [
+      {
+        "id": 26468,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:15",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".6"
+        ]
+      },
+      {
+        "id": 26473,
+        "nodeType": "ContractDefinition",
+        "src": "60:56:15",
+        "nodes": [
+          {
+            "id": 26472,
+            "nodeType": "FunctionDefinition",
+            "src": "85:29:15",
+            "nodes": [],
+            "body": {
+              "id": 26471,
+              "nodeType": "Block",
+              "src": "98:16:15",
+              "nodes": [],
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 26469,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "96:2:15"
+            },
+            "returnParameters": {
+              "id": 26470,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "98:0:15"
+            },
+            "scope": 26473,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Contract",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          26473
+        ],
+        "name": "Contract",
+        "nameLocation": "69:8:15",
+        "scope": 26474,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 15
+}

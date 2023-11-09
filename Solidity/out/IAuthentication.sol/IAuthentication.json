@@ -1,0 +1,255 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "getActionId",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getActionId(bytes4)": "851c1bb3"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"selector\",\"type\":\"bytes4\"}],\"name\":\"getActionId\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getActionId(bytes4)\":{\"details\":\"Returns the action identifier associated with the external function described by `selector`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol\":\"IAuthentication\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol\":{\"keccak256\":\"0x2d45ea7c14dc950acf5917377d9eb67d2b1d9f8b8d81fa60eeaad345cf257655\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://c387331bc3da670d45d54af96b067ea6fce6f3e0e5fac53b86fba73d5e9e874a\",\"dweb:/ipfs/QmYkY4d2TDA4BXpjz1RPQn8rdWvZVTi3pSBbiUSaPFKwtM\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "selector",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getActionId",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getActionId(bytes4)": {
+            "details": "Returns the action identifier associated with the external function described by `selector`."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/",
+        "@balancerV2/=lib/balancer-v2-monorepo/pkg/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "balancer-v2-monorepo/=lib/balancer-v2-monorepo/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        "std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol": "IAuthentication"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol": {
+        "keccak256": "0x2d45ea7c14dc950acf5917377d9eb67d2b1d9f8b8d81fa60eeaad345cf257655",
+        "urls": [
+          "bzz-raw://c387331bc3da670d45d54af96b067ea6fce6f3e0e5fac53b86fba73d5e9e874a",
+          "dweb:/ipfs/QmYkY4d2TDA4BXpjz1RPQn8rdWvZVTi3pSBbiUSaPFKwtM"
+        ],
+        "license": "GPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol",
+    "id": 11,
+    "exportedSymbols": {
+      "IAuthentication": [
+        10
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "688:259:0",
+    "nodes": [
+      {
+        "id": 1,
+        "nodeType": "PragmaDirective",
+        "src": "688:31:0",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 10,
+        "nodeType": "ContractDefinition",
+        "src": "721:225:0",
+        "nodes": [
+          {
+            "id": 9,
+            "nodeType": "FunctionDefinition",
+            "src": "874:70:0",
+            "nodes": [],
+            "documentation": {
+              "id": 2,
+              "nodeType": "StructuredDocumentation",
+              "src": "753:116:0",
+              "text": " @dev Returns the action identifier associated with the external function described by `selector`."
+            },
+            "functionSelector": "851c1bb3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getActionId",
+            "nameLocation": "883:11:0",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4,
+                  "mutability": "mutable",
+                  "name": "selector",
+                  "nameLocation": "902:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9,
+                  "src": "895:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 3,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "895:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "894:17:0"
+            },
+            "returnParameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 9,
+                  "src": "935:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "935:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "934:9:0"
+            },
+            "scope": 10,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAuthentication",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          10
+        ],
+        "name": "IAuthentication",
+        "nameLocation": "731:15:0",
+        "scope": 11,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "GPL-3.0-or-later"
+  },
+  "id": 0
+}
