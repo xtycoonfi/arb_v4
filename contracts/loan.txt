@@ -1,0 +1,19 @@
+For testing :
+
+1. Get loan from balancer
+2. Repay loan 
+
+When it works :
+
+1. Get loan
+2. Do a simple swap on uni v3 (we will use every forks)
+3. Repay loan
+
+When everything its ok for you, i will finish the bot
+
+Ressources : 
+
+- https://eigenphi.io/
+- https://docs.balancer.fi/reference/contracts/flash-loans.html
+- https://defillama.com/forks/Uniswap%20V3
+- https://defillama.com/forks/Uniswap%20V2
