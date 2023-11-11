@@ -13,44 +13,40 @@ contract Test_Sample is Test {
 
     IERC20 public WMATIC;
     IERC20 public LINK;
-    FlashLoanRecipient public flr;
+    ArbitrageExecuter public arbitrageExecuter;
 
     IERC20[] public erc20List;
     uint256[] public amounts;
     function setUp() public {
-        flr = new FlashLoanRecipient();
+        // deploy ArbitrageExecuter
+        arbitrageExecuter = new ArbitrageExecuter();
+        // Declare token addresses for naive tests
         WMATIC = IERC20(address(0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270));
         LINK = IERC20(address(0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39));
-        erc20List.push(WMATIC);
-        amounts.push(1e22);
-        console.log("FLR address: ", address(flr));
+        console.log("arbitrageExecuter address: ", address(arbitrageExecuter));
     }
     
+    // This is broken due to new changes, to be refactored.
     function testLoan() public {
-        flr.makeFlashLoan(erc20List, amounts, "");
+        erc20List.push(WMATIC);
+        amounts.push(1e22);
+        arbitrageExecuter.makeFlashLoan(erc20List, amounts, "");
         
     }
-    /*
-    function testSwapInput() public {
-        deal(address(WMATIC), address(flr), 1e20);
-     
-        flr.swapExactInputSingle(address(WMATIC), address(LINK), 1e20);
-        console.log("LINK Balance", IERC20(LINK).balanceOf(address(flr)));
-        console.log("WMATIC Balance", IERC20(WMATIC).balanceOf(address(flr)));
-    }
-    */
+
+    // Naive test to be refactored
     function testSwapOut() public {
-        deal(address(WMATIC), address(flr), 1e27);
+        deal(address(WMATIC), address(arbitrageExecuter), 1e27);
         console.log("Pool LINK Balance before", IERC20(LINK).balanceOf(0x33bc9A6a200752ddd44F41dD978977E0699cC00d));
-        flr.swapExactOutputSingle(
+        arbitrageExecuter.swapExactOutputSingle(
             address(WMATIC), 
             address(LINK), 
-            2e18,
+            1e18,
             1e27,
             address(quickRouter));
         console.log("Pool LINK Balance after ", IERC20(LINK).balanceOf(0x33bc9A6a200752ddd44F41dD978977E0699cC00d));
-        console.log("LINK Balance", IERC20(LINK).balanceOf(address(flr)));
-        console.log("WMATIC Balance", IERC20(WMATIC).balanceOf(address(flr)));
+        console.log("LINK Balance", IERC20(LINK).balanceOf(address(arbitrageExecuter)));
+        console.log("WMATIC Balance", IERC20(WMATIC).balanceOf(address(arbitrageExecuter)));
     }    
 }
 

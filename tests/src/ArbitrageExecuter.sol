@@ -10,7 +10,7 @@ import "./minimalTokensInterface.sol"; // useful if we want to retrieve token0 a
 pragma solidity ^0.8.6;
 pragma abicoder v2;
 
-contract FlashLoanRecipient is IFlashLoanRecipient {
+contract ArbitrageExecuter is IFlashLoanRecipient {
     
     IVault private _vault;                                                                       //BalancerV2 vault interface
     uint24 public constant poolFee   = 3000;                                                       // placeholder fee, will fetch every fee on each pool via globalState()
@@ -69,6 +69,10 @@ contract FlashLoanRecipient is IFlashLoanRecipient {
         
     }
 
+    // decode encode data
+    // Structure is
+    // Address Router, address pool1, address pool2, uint256 amount1_maxIn, uint256 amount1_out, uint256 amount2_maxIn, amount2 out
+    // This is provisory. We need to enstablish if we retrieve all pool info on or off chain
     function decodeUserData(bytes memory userData) internal pure returns (address, address, address, uint256, uint256, uint256, uint256, uint) {
         return abi.decode(userData, (address, address, address, uint256, uint256, uint256, uint256, uint));
     }
