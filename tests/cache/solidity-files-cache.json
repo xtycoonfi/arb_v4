@@ -1110,9 +1110,136 @@
         }
       }
     },
+    "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol": {
+      "lastModificationDate": 1699655717011,
+      "contentHash": "a87f61d94c7f83400c1a3df118cd9e2c",
+      "sourceName": "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol"
+      ],
+      "versionRequirement": ">=0.7.5",
+      "artifacts": {
+        "ISwapRouter": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "ISwapRouter.sol/ISwapRouter.json"
+        }
+      }
+    },
+    "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol": {
+      "lastModificationDate": 1699655704475,
+      "contentHash": "418863f2ec3ee7aff8920cb67f5fa813",
+      "sourceName": "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "IUniswapV3SwapCallback": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "IUniswapV3SwapCallback.sol/IUniswapV3SwapCallback.json"
+        }
+      }
+    },
+    "lib/v3-periphery/contracts/libraries/TransferHelper.sol": {
+      "lastModificationDate": 1699656135685,
+      "contentHash": "757aff6fdb05b27cae0307146d8fe387",
+      "sourceName": "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol"
+      ],
+      "versionRequirement": ">=0.6.0",
+      "artifacts": {
+        "TransferHelper": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "TransferHelper.sol/TransferHelper.json"
+        }
+      }
+    },
     "src/contract.sol": {
-      "lastModificationDate": 1699545421879,
-      "contentHash": "6e80e23ede914917b9fa84323499ce1a",
+      "lastModificationDate": 1699726193855,
+      "contentHash": "685fd72c462429b50f2586131f877909",
       "sourceName": "src/contract.sol",
       "solcConfig": {
         "settings": {
@@ -1153,7 +1280,10 @@
         "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol",
         "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol",
         "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IProtocolFeesCollector.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol"
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol",
+        "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
+        "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
+        "lib/v3-periphery/contracts/libraries/TransferHelper.sol"
       ],
       "versionRequirement": "^0.8.6",
       "artifacts": {
@@ -1163,8 +1293,8 @@
       }
     },
     "test/test.t.sol": {
-      "lastModificationDate": 1699545721707,
-      "contentHash": "065f84e7b0121162267f4759012c0c63",
+      "lastModificationDate": 1699724460216,
+      "contentHash": "e3d43cb4a9f9a0ecdbeb9c4abf885d73",
       "sourceName": "test/test.t.sol",
       "solcConfig": {
         "settings": {
@@ -1221,6 +1351,9 @@
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
         "lib/forge-std/src/test.sol",
+        "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
+        "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
+        "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
         "src/contract.sol"
       ],
       "versionRequirement": "^0.8.6",
