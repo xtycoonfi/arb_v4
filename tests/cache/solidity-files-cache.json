@@ -1237,10 +1237,10 @@
         }
       }
     },
-    "src/contract.sol": {
-      "lastModificationDate": 1699726193855,
-      "contentHash": "685fd72c462429b50f2586131f877909",
-      "sourceName": "src/contract.sol",
+    "src/ArbitrageExecuter.sol": {
+      "lastModificationDate": 1699797900820,
+      "contentHash": "baf1022143d76d7b6cb199e7cc3280ea",
+      "sourceName": "src/ArbitrageExecuter.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1283,18 +1283,116 @@
         "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol",
         "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
         "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
-        "lib/v3-periphery/contracts/libraries/TransferHelper.sol"
+        "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
+        "src/minimalTokensInterface.sol"
       ],
       "versionRequirement": "^0.8.6",
       "artifacts": {
-        "FlashLoanRecipient": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "contract.sol/FlashLoanRecipient.json"
+        "ArbitrageExecuter": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "src/src/src/src/src/src/src/src/src/src/src/src/ArbitrageExecuter.sol/ArbitrageExecuter.json"
+        }
+      }
+    },
+    "src/arbitrageExecuter.sol": {
+      "lastModificationDate": 1699797900820,
+      "contentHash": "baf1022143d76d7b6cb199e7cc3280ea",
+      "sourceName": "src/arbitrageExecuter.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ISignaturesValidator.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/misc/IWETH.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IProtocolFeesCollector.sol",
+        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol",
+        "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
+        "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
+        "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
+        "src/minimalTokensInterface.sol"
+      ],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "ArbitrageExecuter": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "src/src/src/src/src/src/src/src/src/src/src/src/arbitrageExecuter.sol/ArbitrageExecuter.json"
+        }
+      }
+    },
+    "src/minimalTokensInterface.sol": {
+      "lastModificationDate": 1699727430385,
+      "contentHash": "2f7c5c83a81a66b5e6e9d16eb2c0c532",
+      "sourceName": "src/minimalTokensInterface.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "minimalTokensInterface": {
+          "0.8.21+commit.d9974bed.Linux.gcc": "minimalTokensInterface.sol/minimalTokensInterface.json"
         }
       }
     },
     "test/test.t.sol": {
-      "lastModificationDate": 1699724460216,
-      "contentHash": "e3d43cb4a9f9a0ecdbeb9c4abf885d73",
+      "lastModificationDate": 1699797556517,
+      "contentHash": "60768d844678fc8ee836d023da7ab7f4",
       "sourceName": "test/test.t.sol",
       "solcConfig": {
         "settings": {
@@ -1354,7 +1452,8 @@
         "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
         "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
         "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
-        "src/contract.sol"
+        "src/arbitrageExecuter.sol",
+        "src/minimalTokensInterface.sol"
       ],
       "versionRequirement": "^0.8.6",
       "artifacts": {

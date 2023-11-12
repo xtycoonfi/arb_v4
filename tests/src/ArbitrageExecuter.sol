@@ -45,37 +45,69 @@ contract ArbitrageExecuter is IFlashLoanRecipient {
         (   address router,
             address pool1,
             address pool2,
+            address pool3,
             uint256 amount1_maxIn,
             uint256 amount1_out,
             uint256 amount2_maxIn,
-            uint256 amount2_out,
+            uint256 amount2_out
         ) = decodeUserData(userData);
         
         address pool1_token0 = minimalTokensInterface(pool1).token0();
-        address pool1_token1 = minimalTokensInterface(pool1).token0();
+        address pool1_token1 = minimalTokensInterface(pool1).token1();
         address pool2_token0 = minimalTokensInterface(pool2).token0();
-        address pool2_token1 = minimalTokensInterface(pool2).token0();
+     
 
-        //Execute swap 1. 
+        //Execute swap 1. WMATIC/QUICK
         swapExactOutputSingle(pool1_token0, pool1_token1, amount1_out, amount1_maxIn, router);
-        //Execute swap 2
-        swapExactOutputSingle(pool2_token0, pool2_token1, amount2_out, amount2_maxIn, router);
+        //Execute swap 2 QUICK/USDC
+        swapExactInputSingle(pool1_token1, pool2_token0, IERC20(pool1_token1).balanceOf(address(this)), amount2_maxIn, router);
+        //Execute swap 3 WMATIC/USDC
+        swapExactInputSingle(pool2_token0, pool1_token0, IERC20(pool2_token0).balanceOf(address(this)), amount2_maxIn, router);
 
-        // repay all the borrowed tokens
+        repay(tokens, amounts, feeAmounts);
+        
+    }
+
+    function repay(
+        IERC20[] memory tokens,
+        uint256[] memory amounts,
+        uint256[] memory feeAmounts
+        ) internal {
+             
         for (uint i; i< tokens.length; ) {
             IERC20(address(tokens[i])).transfer(address(_vault), amounts[i] + feeAmounts[i]);
             ++i;
         }
-        
     }
-
     // decode encode data
     // Structure is
     // Address Router, address pool1, address pool2, uint256 amount1_maxIn, uint256 amount1_out, uint256 amount2_maxIn, amount2 out
     // This is provisory. We need to enstablish if we retrieve all pool info on or off chain
-    function decodeUserData(bytes memory userData) internal pure returns (address, address, address, uint256, uint256, uint256, uint256, uint) {
-        return abi.decode(userData, (address, address, address, uint256, uint256, uint256, uint256, uint));
+    function decodeUserData(bytes memory userData) internal pure returns (address, address, address, address, uint256, uint256, uint256, uint256) {
+        return abi.decode(userData, (address, address, address, address, uint256, uint256, uint256, uint256));
     }
+
+    function encodeUserData(
+        address router,
+        address pool1,
+        address pool2, 
+        address pool3,
+        uint256 amount1_maxIn, 
+        uint256 amount1_out, 
+        uint256 amount2_maxIn, 
+        uint256 amount2_out
+        ) public pure returns (bytes memory){
+            return abi.encode(
+                router,
+                pool1, 
+                pool2,
+                pool3,
+                amount1_maxIn, 
+                amount1_out, 
+                amount2_maxIn, 
+                amount2_out
+            );
+        }
 
     // swap in order to receive exactly amountOut of tokenOut. 
     // useAmountInMaximum to set a cap on how much we are willing to pay to get at this amount
@@ -103,7 +135,7 @@ contract ArbitrageExecuter is IFlashLoanRecipient {
     }
 
      // TO DO, AVOID USING THIS FUNC FOR NOW
-    function swapExactInputSingle(address tokenIn, address tokenOut, uint256 amountIn, address router) public returns (uint256 amountOut) {
+    function swapExactInputSingle(address tokenIn, address tokenOut, uint256 amountIn, uint256 amountOutMin, address router) public returns (uint256 amountOut) {
         // Approve the router to spend WMATIC.
         TransferHelper.safeApprove(tokenIn, address(router), amountIn);
 
