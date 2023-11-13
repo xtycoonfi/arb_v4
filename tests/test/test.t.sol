@@ -35,6 +35,7 @@ contract Test_Sample is Test {
         console.log("arbitrageExecuter address: ", address(arbitrageExecuter));
     }
 
+
     // Naive test to be refactored
    /* function testSwapOut() public {
         deal(address(WMATIC), address(arbitrageExecuter), 1e27);
@@ -48,11 +49,20 @@ contract Test_Sample is Test {
         console.log("Pool LINK Balance after ", IERC20(LINK).balanceOf(0x33bc9A6a200752ddd44F41dD978977E0699cC00d));
         console.log("LINK Balance", IERC20(LINK).balanceOf(address(arbitrageExecuter)));
         console.log("WMATIC Balance", IERC20(WMATIC).balanceOf(address(arbitrageExecuter)));
-    }    */ 
-
+    }     
+*/
     function testOp() public {
-        bytes memory userData = arbitrageExecuter.encodeUserData(address(quickRouter), Quickwmatic, QUICKusdc, WmaticUsdc, 10e18, 1e18, 10e18, 1e18);
-
+        bytes memory userData = arbitrageExecuter.encodeUserData(
+            address(quickRouter),
+             Quickwmatic, 
+             QUICKusdc, 
+             WmaticUsdc, 
+             658300000000000000, 
+             10e18, 
+             10e18, 
+             1e18
+        );
+    
         IERC20[] memory erc20List = new IERC20[](1);
         erc20List[0] = WMATIC;
         uint[] memory amounts = new uint[](1);
@@ -61,6 +71,9 @@ contract Test_Sample is Test {
         deal(address(WMATIC), address(arbitrageExecuter), 1e27);
         arbitrageExecuter.makeFlashLoan(erc20List, amounts, userData);
         console.log("Quick balance: ", IERC20(QUICK).balanceOf(address(arbitrageExecuter)));
+        if ( IERC20(WMATIC).balanceOf(address(arbitrageExecuter)) > 1e27)  {
+            console.log("Wmatic earnings: ", IERC20(WMATIC).balanceOf(address(arbitrageExecuter)) - 1e27 );
+        }
     }
 
 

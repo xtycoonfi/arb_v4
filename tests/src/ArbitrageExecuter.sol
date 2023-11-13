@@ -5,6 +5,7 @@ import "@balancerV2/interfaces/contracts/vault/IVault.sol";
 import "@balancerV2/interfaces/contracts/vault/IFlashLoanRecipient.sol";
 import "@univ3/libraries/TransferHelper.sol";
 import "@univ3/interfaces/ISwapRouter.sol";
+import "@univ3/interfaces/ISwapRouterQuick.sol";
 import "./minimalTokensInterface.sol"; // useful if we want to retrieve token0 and token1 from pool addresses. Both good for uni and quickswap
 
 pragma solidity ^0.8.6;
@@ -12,10 +13,10 @@ pragma abicoder v2;
 
 contract ArbitrageExecuter is IFlashLoanRecipient {
     
-    IVault private _vault;                                                                       //BalancerV2 vault interface
-    uint24 public constant poolFee   = 3000;                                                       // placeholder fee, will fetch every fee on each pool via globalState()
-    ISwapRouter public quickRouter   = ISwapRouter(0xf5b509bB0909a69B1c207E495f687a596C168E12);    // Routerv1 of quickswapv3
-    ISwapRouter public uniRouter     = ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564);      // Routerv1 of uniswapv3
+    IVault private _vault;                                                                       
+    uint24 public constant poolFee   = 3000;
+    ISwapRouterQuick public quickRouter   = ISwapRouterQuick(0xf5b509bB0909a69B1c207E495f687a596C168E12);    
+    ISwapRouter public uniRouter     = ISwapRouter(0xE592427A0AEce92De3Edee1F18E0157C05861564);      
     
     constructor(){
         // Init BalancerV2 vault address
@@ -58,14 +59,16 @@ contract ArbitrageExecuter is IFlashLoanRecipient {
      
 
         //Execute swap 1. WMATIC/QUICK
-        swapExactOutputSingle(pool1_token0, pool1_token1, amount1_out, amount1_maxIn, router);
-        //Execute swap 2 QUICK/USDC
-        swapExactInputSingle(pool1_token1, pool2_token0, IERC20(pool1_token1).balanceOf(address(this)), amount2_maxIn, router);
-        //Execute swap 3 WMATIC/USDC
-        swapExactInputSingle(pool2_token0, pool1_token0, IERC20(pool2_token0).balanceOf(address(this)), amount2_maxIn, router);
-
-        repay(tokens, amounts, feeAmounts);
+        swapExactOutputSingle(pool1_token0, pool1_token1, amount1_out, amount1_maxIn, router, poolFee);
+        if (router == address(quickRouter)){
+            quick_swapExactInputSingle(pool1_token1, pool2_token0, IERC20(pool1_token1).balanceOf(address(this)), 51790);
+            quick_swapExactInputSingle(pool2_token0, pool1_token0, IERC20(pool2_token0).balanceOf(address(this)), 626390996665244278);
+        }   else {
+            // uniswap_swaps
+        }
+   
         
+        repay(tokens, amounts, feeAmounts);
     }
 
     function repay(
@@ -83,7 +86,18 @@ contract ArbitrageExecuter is IFlashLoanRecipient {
     // Structure is
     // Address Router, address pool1, address pool2, uint256 amount1_maxIn, uint256 amount1_out, uint256 amount2_maxIn, amount2 out
     // This is provisory. We need to enstablish if we retrieve all pool info on or off chain
-    function decodeUserData(bytes memory userData) internal pure returns (address, address, address, address, uint256, uint256, uint256, uint256) {
+    function decodeUserData(
+        bytes memory userData
+        ) internal pure returns (
+        address, 
+        address, 
+        address, 
+        address, 
+        uint256, 
+        uint256, 
+        uint256, 
+        uint256
+        ) {
         return abi.decode(userData, (address, address, address, address, uint256, uint256, uint256, uint256));
     }
 
@@ -109,10 +123,15 @@ contract ArbitrageExecuter is IFlashLoanRecipient {
             );
         }
 
-    // swap in order to receive exactly amountOut of tokenOut. 
-    // useAmountInMaximum to set a cap on how much we are willing to pay to get at this amount
-    // returns how much we made
-    function swapExactOutputSingle(address tokenIn, address tokenOut, uint256 amountOut, uint256 amountInMaximum, address router) public returns (uint256 amountIn) {
+  
+    function swapExactOutputSingle(
+        address tokenIn, 
+        address tokenOut, 
+        uint256 amountOut, 
+        uint256 amountInMaximum, 
+        address router,
+        uint24 fee
+    ) public returns (uint256 amountIn) {
      
         // Approve the router to spend the specifed `amountInMaximum` of tokenIn.
         // In production, you should choose the maximum amount to spend based on oracles or other data sources to acheive a better swap.
@@ -134,27 +153,54 @@ contract ArbitrageExecuter is IFlashLoanRecipient {
         amountIn = ISwapRouter(router).exactOutputSingle(params);
     }
 
-     // TO DO, AVOID USING THIS FUNC FOR NOW
-    function swapExactInputSingle(address tokenIn, address tokenOut, uint256 amountIn, uint256 amountOutMin, address router) public returns (uint256 amountOut) {
-        // Approve the router to spend WMATIC.
-        TransferHelper.safeApprove(tokenIn, address(router), amountIn);
+     
+    function uniswap_swapExactInputSingle(
+        address tokenIn, 
+        address tokenOut, 
+        uint256 amountIn, 
+        uint256 amountOutMin,
+        uint24 fee
+        ) public returns (uint256 amountOut) {
+        
+        TransferHelper.safeApprove(tokenIn, address(uniRouter), amountIn);
 
         ISwapRouter.ExactInputSingleParams memory params =
             ISwapRouter.ExactInputSingleParams({
                 tokenIn: tokenIn,
                 tokenOut: tokenOut,
-                fee: poolFee,
+                recipient: address(this),
+                fee: fee,
+                deadline: block.timestamp,
+                amountIn: amountIn,
+                amountOutMinimum: amountOutMin, 
+                sqrtPriceLimitX96: 0 
+            });
+        // The call to `exactInputSingle` executes the swap.
+        amountOut = ISwapRouter(uniRouter).exactInputSingle(params);
+    }
+
+    function quick_swapExactInputSingle(
+        address tokenIn, 
+        address tokenOut, 
+        uint256 amountIn, 
+        uint256 amountOutMin
+        ) public returns (uint256 amountOut) {
+        // Approve the router to spend WMATIC.
+        TransferHelper.safeApprove(tokenIn, address(quickRouter), amountIn);
+
+        ISwapRouterQuick.QuickExactInputSingleParams memory params =
+            ISwapRouterQuick.QuickExactInputSingleParams({
+                tokenIn: tokenIn,
+                tokenOut: tokenOut,
                 recipient: address(this),
                 deadline: block.timestamp,
                 amountIn: amountIn,
-                amountOutMinimum: 0, // BEWARD NOT TO SEND THIS IF amountOUTMinim is 0. Will end up in loss of funds, need to update
+                amountOutMinimum: amountOutMin, // BEWARD NOT TO SEND THIS IF amountOUTMinim is 0. Will end up in loss of funds, need to update
                 sqrtPriceLimitX96: 0 // default to 0, means we are not using it ( i don't even know what the fuck it is )
             });
         // The call to `exactInputSingle` executes the swap.
-        amountOut = ISwapRouter(router).exactInputSingle(params);
+        amountOut = ISwapRouterQuick(quickRouter).exactInputSingle(params);
     }
-
-
 
 }
 
