@@ -12,7 +12,7 @@
   },
   "files": {
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol": {
-      "lastModificationDate": 1699476893261,
+      "lastModificationDate": 1699928380815,
       "contentHash": "63f8c7b7a4ac329c8104063a025a991b",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol",
       "solcConfig": {
@@ -48,12 +48,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IAuthentication": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IAuthentication.sol/IAuthentication.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IAuthentication.sol/IAuthentication.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ISignaturesValidator.sol": {
-      "lastModificationDate": 1699476893339,
+      "lastModificationDate": 1699928380815,
       "contentHash": "48de5f36515898c9e9ddcd00f651ef86",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ISignaturesValidator.sol",
       "solcConfig": {
@@ -89,12 +89,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "ISignaturesValidator": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "ISignaturesValidator.sol/ISignaturesValidator.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "ISignaturesValidator.sol/ISignaturesValidator.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol": {
-      "lastModificationDate": 1699476893379,
+      "lastModificationDate": 1699928380815,
       "contentHash": "5a94e6420fe95c3e0fa16e78fb8f74c3",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol",
       "solcConfig": {
@@ -130,12 +130,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "ITemporarilyPausable": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "ITemporarilyPausable.sol/ITemporarilyPausable.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "ITemporarilyPausable.sol/ITemporarilyPausable.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/misc/IWETH.sol": {
-      "lastModificationDate": 1699476893590,
+      "lastModificationDate": 1699928380815,
       "contentHash": "8347e7eef0bb47de8851ecbcf8eb590c",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/misc/IWETH.sol",
       "solcConfig": {
@@ -173,12 +173,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IWETH": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IWETH.sol/IWETH.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IWETH.sol/IWETH.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol": {
-      "lastModificationDate": 1699476893708,
+      "lastModificationDate": 1699928380815,
       "contentHash": "028dddcf9b178b241401b1ae8126c903",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
       "solcConfig": {
@@ -214,12 +214,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IERC20": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IERC20.sol/IERC20.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IERC20.sol/IERC20.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol": {
-      "lastModificationDate": 1699476895774,
+      "lastModificationDate": 1699928380815,
       "contentHash": "20c61578e7416055512409a25576fb1a",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol",
       "solcConfig": {
@@ -255,12 +255,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IAsset": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IAsset.sol/IAsset.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IAsset.sol/IAsset.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol": {
-      "lastModificationDate": 1699476895867,
+      "lastModificationDate": 1699928380815,
       "contentHash": "03599610995051c98edd4f72102136b2",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol",
       "solcConfig": {
@@ -296,12 +296,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IAuthorizer": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IAuthorizer.sol/IAuthorizer.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IAuthorizer.sol/IAuthorizer.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol": {
-      "lastModificationDate": 1699476895955,
+      "lastModificationDate": 1699928380815,
       "contentHash": "31e2c769fc0ac25db2d9b46225793f01",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol",
       "solcConfig": {
@@ -339,12 +339,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IFlashLoanRecipient": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IFlashLoanRecipient.sol/IFlashLoanRecipient.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IFlashLoanRecipient.sol/IFlashLoanRecipient.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IProtocolFeesCollector.sol": {
-      "lastModificationDate": 1699476896057,
+      "lastModificationDate": 1699928380815,
       "contentHash": "26a23f2667431cfc1ea8aa5e69edef63",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IProtocolFeesCollector.sol",
       "solcConfig": {
@@ -391,12 +391,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IProtocolFeesCollector": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IProtocolFeesCollector.sol/IProtocolFeesCollector.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IProtocolFeesCollector.sol/IProtocolFeesCollector.json"
         }
       }
     },
     "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol": {
-      "lastModificationDate": 1699476896104,
+      "lastModificationDate": 1699928380815,
       "contentHash": "46a20a7701464ab9c62cb907614fd3bb",
       "sourceName": "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol",
       "solcConfig": {
@@ -443,12 +443,12 @@
       "versionRequirement": ">=0.7.0, <0.9.0",
       "artifacts": {
         "IVault": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IVault.sol/IVault.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IVault.sol/IVault.json"
         }
       }
     },
     "lib/forge-std/lib/ds-test/src/test.sol": {
-      "lastModificationDate": 1698774925848,
+      "lastModificationDate": 1699928380863,
       "contentHash": "962996f0e05d5218857a538a62d7c47e",
       "sourceName": "lib/forge-std/lib/ds-test/src/test.sol",
       "solcConfig": {
@@ -484,12 +484,12 @@
       "versionRequirement": ">=0.5.0",
       "artifacts": {
         "DSTest": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "test.sol/DSTest.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "test.sol/DSTest.json"
         }
       }
     },
     "lib/forge-std/src/Base.sol": {
-      "lastModificationDate": 1698774925903,
+      "lastModificationDate": 1699928380863,
       "contentHash": "8f04bbbb2c16f79e14fdc321695a8ec2",
       "sourceName": "lib/forge-std/src/Base.sol",
       "solcConfig": {
@@ -528,18 +528,18 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "CommonBase": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "Base.sol/CommonBase.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "Base.sol/CommonBase.json"
         },
         "ScriptBase": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "Base.sol/ScriptBase.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "Base.sol/ScriptBase.json"
         },
         "TestBase": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "Base.sol/TestBase.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "Base.sol/TestBase.json"
         }
       }
     },
     "lib/forge-std/src/StdAssertions.sol": {
-      "lastModificationDate": 1698774925986,
+      "lastModificationDate": 1699928380863,
       "contentHash": "5bc6a90903a666d831370fa46838ed73",
       "sourceName": "lib/forge-std/src/StdAssertions.sol",
       "solcConfig": {
@@ -578,12 +578,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "StdAssertions": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdAssertions.sol/StdAssertions.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdAssertions.sol/StdAssertions.json"
         }
       }
     },
     "lib/forge-std/src/StdChains.sol": {
-      "lastModificationDate": 1698774926008,
+      "lastModificationDate": 1699928380863,
       "contentHash": "3ebb3d0e5e74705c4214d3d2255af02d",
       "sourceName": "lib/forge-std/src/StdChains.sol",
       "solcConfig": {
@@ -621,12 +621,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "StdChains": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdChains.sol/StdChains.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdChains.sol/StdChains.json"
         }
       }
     },
     "lib/forge-std/src/StdCheats.sol": {
-      "lastModificationDate": 1698774926024,
+      "lastModificationDate": 1699928380863,
       "contentHash": "ed0130ab99d0859cf7da2949203a4679",
       "sourceName": "lib/forge-std/src/StdCheats.sol",
       "solcConfig": {
@@ -665,15 +665,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "StdCheats": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdCheats.sol/StdCheats.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdCheats.sol/StdCheats.json"
         },
         "StdCheatsSafe": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdCheats.sol/StdCheatsSafe.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdCheats.sol/StdCheatsSafe.json"
         }
       }
     },
     "lib/forge-std/src/StdError.sol": {
-      "lastModificationDate": 1698774926053,
+      "lastModificationDate": 1699928380863,
       "contentHash": "64c896e1276a291776e5ea5aecb3870a",
       "sourceName": "lib/forge-std/src/StdError.sol",
       "solcConfig": {
@@ -709,12 +709,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "stdError": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdError.sol/stdError.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdError.sol/stdError.json"
         }
       }
     },
     "lib/forge-std/src/StdJson.sol": {
-      "lastModificationDate": 1698774926075,
+      "lastModificationDate": 1699928380863,
       "contentHash": "016de2d7ee55960094cc97ec792025bb",
       "sourceName": "lib/forge-std/src/StdJson.sol",
       "solcConfig": {
@@ -752,12 +752,12 @@
       "versionRequirement": ">=0.6.0, <0.9.0",
       "artifacts": {
         "stdJson": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdJson.sol/stdJson.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdJson.sol/stdJson.json"
         }
       }
     },
     "lib/forge-std/src/StdMath.sol": {
-      "lastModificationDate": 1698774926099,
+      "lastModificationDate": 1699928380863,
       "contentHash": "9da8f453eba6bb98f3d75bc6822bfb29",
       "sourceName": "lib/forge-std/src/StdMath.sol",
       "solcConfig": {
@@ -793,12 +793,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "stdMath": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdMath.sol/stdMath.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdMath.sol/stdMath.json"
         }
       }
     },
     "lib/forge-std/src/StdStorage.sol": {
-      "lastModificationDate": 1698774926158,
+      "lastModificationDate": 1699928380863,
       "contentHash": "3cb9868082df39a53927db09dbc21f23",
       "sourceName": "lib/forge-std/src/StdStorage.sol",
       "solcConfig": {
@@ -836,15 +836,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "stdStorage": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdStorage.sol/stdStorage.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdStorage.sol/stdStorage.json"
         },
         "stdStorageSafe": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdStorage.sol/stdStorageSafe.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdStorage.sol/stdStorageSafe.json"
         }
       }
     },
     "lib/forge-std/src/StdUtils.sol": {
-      "lastModificationDate": 1698774926178,
+      "lastModificationDate": 1699928380863,
       "contentHash": "7e77cc909faa708c1511911ca74c497e",
       "sourceName": "lib/forge-std/src/StdUtils.sol",
       "solcConfig": {
@@ -883,12 +883,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "StdUtils": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "StdUtils.sol/StdUtils.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "StdUtils.sol/StdUtils.json"
         }
       }
     },
     "lib/forge-std/src/Vm.sol": {
-      "lastModificationDate": 1698774926225,
+      "lastModificationDate": 1699928380863,
       "contentHash": "86d01713430fa0877970a6ed8f99dc78",
       "sourceName": "lib/forge-std/src/Vm.sol",
       "solcConfig": {
@@ -924,15 +924,15 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "Vm": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "Vm.sol/Vm.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "Vm.sol/Vm.json"
         },
         "VmSafe": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "Vm.sol/VmSafe.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "Vm.sol/VmSafe.json"
         }
       }
     },
     "lib/forge-std/src/console.sol": {
-      "lastModificationDate": 1698774926241,
+      "lastModificationDate": 1699928380863,
       "contentHash": "100b8a33b917da1147740d7ab8b0ded3",
       "sourceName": "lib/forge-std/src/console.sol",
       "solcConfig": {
@@ -968,12 +968,12 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "console.sol/console.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "console.sol/console.json"
         }
       }
     },
     "lib/forge-std/src/console2.sol": {
-      "lastModificationDate": 1698774926269,
+      "lastModificationDate": 1699928380863,
       "contentHash": "2096b4e5f252c5df9909cccbe3d2da2e",
       "sourceName": "lib/forge-std/src/console2.sol",
       "solcConfig": {
@@ -1009,12 +1009,12 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console2": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "console2.sol/console2.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "console2.sol/console2.json"
         }
       }
     },
     "lib/forge-std/src/interfaces/IMulticall3.sol": {
-      "lastModificationDate": 1698774926453,
+      "lastModificationDate": 1699928380863,
       "contentHash": "7b131ca1ca32ef6378b7b9ad5488b901",
       "sourceName": "lib/forge-std/src/interfaces/IMulticall3.sol",
       "solcConfig": {
@@ -1050,12 +1050,12 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "IMulticall3": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IMulticall3.sol/IMulticall3.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IMulticall3.sol/IMulticall3.json"
         }
       }
     },
     "lib/forge-std/src/test.sol": {
-      "lastModificationDate": 1698774926202,
+      "lastModificationDate": 1699928380863,
       "contentHash": "9ca73393dbc2f8cde2aa628f8d05c5d5",
       "sourceName": "lib/forge-std/src/test.sol",
       "solcConfig": {
@@ -1106,13 +1106,13 @@
       "versionRequirement": ">=0.6.2, <0.9.0",
       "artifacts": {
         "Test": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "test.sol/Test.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "test.sol/Test.json"
         }
       }
     },
     "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol": {
-      "lastModificationDate": 1699808186805,
-      "contentHash": "3d50ec3da0791e690389c38821211bab",
+      "lastModificationDate": 1699928380875,
+      "contentHash": "a87f61d94c7f83400c1a3df118cd9e2c",
       "sourceName": "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
       "solcConfig": {
         "settings": {
@@ -1149,12 +1149,55 @@
       "versionRequirement": ">=0.7.5",
       "artifacts": {
         "ISwapRouter": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "ISwapRouter.sol/ISwapRouter.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "ISwapRouter.sol/ISwapRouter.json"
+        }
+      }
+    },
+    "lib/v3-periphery/contracts/interfaces/ISwapRouterQuick.sol": {
+      "lastModificationDate": 1699973432495,
+      "contentHash": "970d5f5f55f16757bda9387de71a481c",
+      "sourceName": "lib/v3-periphery/contracts/interfaces/ISwapRouterQuick.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol"
+      ],
+      "versionRequirement": ">=0.7.5",
+      "artifacts": {
+        "ISwapRouterQuick": {
+          "0.8.23+commit.f704f362.Linux.gcc": "ISwapRouterQuick.sol/ISwapRouterQuick.json"
         }
       }
     },
     "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol": {
-      "lastModificationDate": 1699655704475,
+      "lastModificationDate": 1699928380875,
       "contentHash": "418863f2ec3ee7aff8920cb67f5fa813",
       "sourceName": "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
       "solcConfig": {
@@ -1190,12 +1233,12 @@
       "versionRequirement": ">=0.5.0",
       "artifacts": {
         "IUniswapV3SwapCallback": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "IUniswapV3SwapCallback.sol/IUniswapV3SwapCallback.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "IUniswapV3SwapCallback.sol/IUniswapV3SwapCallback.json"
         }
       }
     },
     "lib/v3-periphery/contracts/libraries/TransferHelper.sol": {
-      "lastModificationDate": 1699656135685,
+      "lastModificationDate": 1699928380875,
       "contentHash": "757aff6fdb05b27cae0307146d8fe387",
       "sourceName": "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
       "solcConfig": {
@@ -1233,14 +1276,14 @@
       "versionRequirement": ">=0.6.0",
       "artifacts": {
         "TransferHelper": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "TransferHelper.sol/TransferHelper.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "TransferHelper.sol/TransferHelper.json"
         }
       }
     },
-    "src/ArbitrageExecuter.sol": {
-      "lastModificationDate": 1699809591436,
-      "contentHash": "457b731c25243ea2c9c8a9c9415873b7",
-      "sourceName": "src/ArbitrageExecuter.sol",
+    "src/IAlgebraPool.sol": {
+      "lastModificationDate": 1699972914828,
+      "contentHash": "8feb38ac0d8b63da049909af9d98b921",
+      "sourceName": "src/IAlgebraPool.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1270,32 +1313,99 @@
           "libraries": {}
         }
       },
-      "imports": [
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/IAuthentication.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ISignaturesValidator.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/misc/IWETH.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/openzeppelin/IERC20.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IFlashLoanRecipient.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IProtocolFeesCollector.sol",
-        "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol",
-        "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
-        "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
-        "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
-        "src/minimalTokensInterface.sol"
-      ],
+      "imports": [],
       "versionRequirement": "^0.8.6",
       "artifacts": {
-        "ArbitrageExecuter": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/ArbitrageExecuter.sol/ArbitrageExecuter.json"
+        "IAlgebraPool": {
+          "0.8.23+commit.f704f362.Linux.gcc": "IAlgebraPool.sol/IAlgebraPool.json"
+        }
+      }
+    },
+    "src/IQuoter_quick.sol": {
+      "lastModificationDate": 1699972914828,
+      "contentHash": "60e9dd12f457676b7de0f8f3d0998f88",
+      "sourceName": "src/IQuoter_quick.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.7.5",
+      "artifacts": {
+        "IQuoterV2": {
+          "0.8.23+commit.f704f362.Linux.gcc": "IQuoter_quick.sol/IQuoterV2.json"
+        }
+      }
+    },
+    "src/IUniswapV3Pool.sol": {
+      "lastModificationDate": 1699972914828,
+      "contentHash": "2bc276fa6705df613c82e08587483f73",
+      "sourceName": "src/IUniswapV3Pool.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "useLiteralContent": false,
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "paris",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.6",
+      "artifacts": {
+        "IUniswapV3Pool": {
+          "0.8.23+commit.f704f362.Linux.gcc": "IUniswapV3Pool.sol/IUniswapV3Pool.json"
         }
       }
     },
     "src/arbitrageExecuter.sol": {
-      "lastModificationDate": 1699809591436,
-      "contentHash": "457b731c25243ea2c9c8a9c9415873b7",
+      "lastModificationDate": 1699972914828,
+      "contentHash": "b7c345534e7b1a84323e542c32355084",
       "sourceName": "src/arbitrageExecuter.sol",
       "solcConfig": {
         "settings": {
@@ -1338,19 +1448,22 @@
         "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IProtocolFeesCollector.sol",
         "lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IVault.sol",
         "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
+        "lib/v3-periphery/contracts/interfaces/ISwapRouterQuick.sol",
         "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
         "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
+        "src/IAlgebraPool.sol",
+        "src/IUniswapV3Pool.sol",
         "src/minimalTokensInterface.sol"
       ],
       "versionRequirement": "^0.8.6",
       "artifacts": {
         "ArbitrageExecuter": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/src/arbitrageExecuter.sol/ArbitrageExecuter.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "arbitrageExecuter.sol/ArbitrageExecuter.json"
         }
       }
     },
     "src/minimalTokensInterface.sol": {
-      "lastModificationDate": 1699727430385,
+      "lastModificationDate": 1699928380991,
       "contentHash": "2f7c5c83a81a66b5e6e9d16eb2c0c532",
       "sourceName": "src/minimalTokensInterface.sol",
       "solcConfig": {
@@ -1386,13 +1499,13 @@
       "versionRequirement": "^0.8.6",
       "artifacts": {
         "minimalTokensInterface": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "minimalTokensInterface.sol/minimalTokensInterface.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "minimalTokensInterface.sol/minimalTokensInterface.json"
         }
       }
     },
     "test/test.t.sol": {
-      "lastModificationDate": 1699808990341,
-      "contentHash": "6644d3e408f17163f460a6a7975f9817",
+      "lastModificationDate": 1699972914828,
+      "contentHash": "92c02c8486037ae5ac2e6a622a552848",
       "sourceName": "test/test.t.sol",
       "solcConfig": {
         "settings": {
@@ -1450,15 +1563,18 @@
         "lib/forge-std/src/interfaces/IMulticall3.sol",
         "lib/forge-std/src/test.sol",
         "lib/v3-periphery/contracts/interfaces/ISwapRouter.sol",
+        "lib/v3-periphery/contracts/interfaces/ISwapRouterQuick.sol",
         "lib/v3-periphery/contracts/interfaces/IUniswapV3SwapCallback.sol",
         "lib/v3-periphery/contracts/libraries/TransferHelper.sol",
+        "src/IAlgebraPool.sol",
+        "src/IUniswapV3Pool.sol",
         "src/arbitrageExecuter.sol",
         "src/minimalTokensInterface.sol"
       ],
       "versionRequirement": "^0.8.6",
       "artifacts": {
         "Test_Sample": {
-          "0.8.21+commit.d9974bed.Linux.gcc": "test.t.sol/Test_Sample.json"
+          "0.8.23+commit.f704f362.Linux.gcc": "test.t.sol/Test_Sample.json"
         }
       }
     }

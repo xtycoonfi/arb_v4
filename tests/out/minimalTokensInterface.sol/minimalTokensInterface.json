@@ -41,10 +41,10 @@
     "token0()": "0dfe1681",
     "token1()": "d21220a7"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"token0\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/minimalTokensInterface.sol\":\"minimalTokensInterface\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@univ3/=lib/v3-periphery/contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"src/minimalTokensInterface.sol\":{\"keccak256\":\"0xef17235713840983b28ea429d8182a1dfb9130751d6756e1e95997144b2345e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7796c23182a63c4cbd19b320a1ebc318657c7c0c87c841b05838719def5253e\",\"dweb:/ipfs/QmRhwHnbNpD1NB19iKwJ3RhWNxscoTbabCdPqt9BE7Ttrn\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"token0\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/minimalTokensInterface.sol\":\"minimalTokensInterface\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@univ3/=lib/v3-periphery/contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"src/minimalTokensInterface.sol\":{\"keccak256\":\"0xef17235713840983b28ea429d8182a1dfb9130751d6756e1e95997144b2345e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7796c23182a63c4cbd19b320a1ebc318657c7c0c87c841b05838719def5253e\",\"dweb:/ipfs/QmRhwHnbNpD1NB19iKwJ3RhWNxscoTbabCdPqt9BE7Ttrn\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.21+commit.d9974bed"
+      "version": "0.8.23+commit.f704f362"
     },
     "language": "Solidity",
     "output": {
@@ -126,19 +126,19 @@
   },
   "ast": {
     "absolutePath": "src/minimalTokensInterface.sol",
-    "id": 28210,
+    "id": 28338,
     "exportedSymbols": {
       "minimalTokensInterface": [
-        28209
+        28337
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "37:176:30",
+    "src": "37:176:33",
     "nodes": [
       {
-        "id": 28198,
+        "id": 28326,
         "nodeType": "PragmaDirective",
-        "src": "37:23:30",
+        "src": "37:23:33",
         "nodes": [],
         "literals": [
           "solidity",
@@ -148,40 +148,40 @@
         ]
       },
       {
-        "id": 28209,
+        "id": 28337,
         "nodeType": "ContractDefinition",
-        "src": "64:149:30",
+        "src": "64:149:33",
         "nodes": [
           {
-            "id": 28203,
+            "id": 28331,
             "nodeType": "FunctionDefinition",
-            "src": "104:50:30",
+            "src": "104:50:33",
             "nodes": [],
             "functionSelector": "0dfe1681",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "token0",
-            "nameLocation": "113:6:30",
+            "nameLocation": "113:6:33",
             "parameters": {
-              "id": 28199,
+              "id": 28327,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "119:2:30"
+              "src": "119:2:33"
             },
             "returnParameters": {
-              "id": 28202,
+              "id": 28330,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 28201,
+                  "id": 28329,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 28203,
-                  "src": "145:7:30",
+                  "scope": 28331,
+                  "src": "145:7:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -189,10 +189,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 28200,
+                    "id": 28328,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "145:7:30",
+                    "src": "145:7:33",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -202,43 +202,43 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "144:9:30"
+              "src": "144:9:33"
             },
-            "scope": 28209,
+            "scope": 28337,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 28208,
+            "id": 28336,
             "nodeType": "FunctionDefinition",
-            "src": "160:50:30",
+            "src": "160:50:33",
             "nodes": [],
             "functionSelector": "d21220a7",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "token1",
-            "nameLocation": "169:6:30",
+            "nameLocation": "169:6:33",
             "parameters": {
-              "id": 28204,
+              "id": 28332,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "175:2:30"
+              "src": "175:2:33"
             },
             "returnParameters": {
-              "id": 28207,
+              "id": 28335,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 28206,
+                  "id": 28334,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 28208,
-                  "src": "201:7:30",
+                  "scope": 28336,
+                  "src": "201:7:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -246,10 +246,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 28205,
+                    "id": 28333,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "201:7:30",
+                    "src": "201:7:33",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -259,9 +259,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "200:9:30"
+              "src": "200:9:33"
             },
-            "scope": 28209,
+            "scope": 28337,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -274,16 +274,16 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          28209
+          28337
         ],
         "name": "minimalTokensInterface",
-        "nameLocation": "74:22:30",
-        "scope": 28210,
+        "nameLocation": "74:22:33",
+        "scope": 28338,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 30
+  "id": 33
 }

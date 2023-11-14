@@ -1,0 +1,204 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "fee",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "fee()": "ddca3f43"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"fee\",\"outputs\":[{\"internalType\":\"uint24\",\"name\":\"\",\"type\":\"uint24\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/IUniswapV3Pool.sol\":\"IUniswapV3Pool\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@univ3/=lib/v3-periphery/contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"src/IUniswapV3Pool.sol\":{\"keccak256\":\"0xd345d9394f63e0af4185268da17eeb4ee960a7596b995eb894fc3419a0b1ad99\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7c98bdac958c995976c7396be3bd8242778ce4177a8e6d45bc59bb937b48644d\",\"dweb:/ipfs/Qmf7NYJJekLmzN8STRbhujUWMYkrhaKZVMqdnCP87CeqzA\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.23+commit.f704f362"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "fee",
+          "outputs": [
+            {
+              "internalType": "uint24",
+              "name": "",
+              "type": "uint24"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/",
+        "@balancerV2/=lib/balancer-v2-monorepo/pkg/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@univ3/=lib/v3-periphery/contracts/",
+        "balancer-v2-monorepo/=lib/balancer-v2-monorepo/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        "std/=lib/forge-std/src/",
+        "v3-periphery/=lib/v3-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/IUniswapV3Pool.sol": "IUniswapV3Pool"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/IUniswapV3Pool.sol": {
+        "keccak256": "0xd345d9394f63e0af4185268da17eeb4ee960a7596b995eb894fc3419a0b1ad99",
+        "urls": [
+          "bzz-raw://7c98bdac958c995976c7396be3bd8242778ce4177a8e6d45bc59bb937b48644d",
+          "dweb:/ipfs/Qmf7NYJJekLmzN8STRbhujUWMYkrhaKZVMqdnCP87CeqzA"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/IUniswapV3Pool.sol",
+    "id": 27779,
+    "exportedSymbols": {
+      "IUniswapV3Pool": [
+        27778
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:108:31",
+    "nodes": [
+      {
+        "id": 27772,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:31",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".6"
+        ]
+      },
+      {
+        "id": 27778,
+        "nodeType": "ContractDefinition",
+        "src": "64:81:31",
+        "nodes": [
+          {
+            "id": 27777,
+            "nodeType": "FunctionDefinition",
+            "src": "96:46:31",
+            "nodes": [],
+            "functionSelector": "ddca3f43",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fee",
+            "nameLocation": "105:3:31",
+            "parameters": {
+              "id": 27773,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "108:2:31"
+            },
+            "returnParameters": {
+              "id": 27776,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27775,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27777,
+                  "src": "134:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint24",
+                    "typeString": "uint24"
+                  },
+                  "typeName": {
+                    "id": 27774,
+                    "name": "uint24",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "134:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint24",
+                      "typeString": "uint24"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "133:8:31"
+            },
+            "scope": 27778,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IUniswapV3Pool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          27778
+        ],
+        "name": "IUniswapV3Pool",
+        "nameLocation": "74:14:31",
+        "scope": 27779,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 31
+}

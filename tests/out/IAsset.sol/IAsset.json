@@ -11,10 +11,10 @@
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"This is an empty interface used to represent either ERC20-conforming token contracts or ETH (using the zero address sentinel value). We're just relying on the fact that `interface` can be used to declare new address-like types. This concept is unrelated to a Pool's Asset Managers.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol\":\"IAsset\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol\":{\"keccak256\":\"0x780769a0bd8655d8a05a75b062b32a65b775b9deb923b2e8f42f57a0ee263a2d\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://b63d22729102954a657432d81b31764e6dbdc7216a6deb991499a73dc4ebbd7b\",\"dweb:/ipfs/QmWRyByegCCJr37yesLi7urtzNk2BBiDEjzbkPpV8TKy1X\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"This is an empty interface used to represent either ERC20-conforming token contracts or ETH (using the zero address sentinel value). We're just relying on the fact that `interface` can be used to declare new address-like types. This concept is unrelated to a Pool's Asset Managers.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol\":\"IAsset\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@univ3/=lib/v3-periphery/contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAsset.sol\":{\"keccak256\":\"0x780769a0bd8655d8a05a75b062b32a65b775b9deb923b2e8f42f57a0ee263a2d\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://b63d22729102954a657432d81b31764e6dbdc7216a6deb991499a73dc4ebbd7b\",\"dweb:/ipfs/QmWRyByegCCJr37yesLi7urtzNk2BBiDEjzbkPpV8TKy1X\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.21+commit.d9974bed"
+      "version": "0.8.23+commit.f704f362"
     },
     "language": "Solidity",
     "output": {
@@ -35,11 +35,13 @@
         "@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/",
         "@balancerV2/=lib/balancer-v2-monorepo/pkg/",
         "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@univ3/=lib/v3-periphery/contracts/",
         "balancer-v2-monorepo/=lib/balancer-v2-monorepo/",
         "ds-test/=lib/forge-std/lib/ds-test/src/",
         "forge-std/=lib/forge-std/src/",
         "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
-        "std/=lib/forge-std/src/"
+        "std/=lib/forge-std/src/",
+        "v3-periphery/=lib/v3-periphery/contracts/"
       ],
       "optimizer": {
         "enabled": true,

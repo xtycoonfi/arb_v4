@@ -43,10 +43,10 @@
   "methodIdentifiers": {
     "canPerform(bytes32,address,address)": "9be2a884"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"actionId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"}],\"name\":\"canPerform\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"canPerform(bytes32,address,address)\":{\"details\":\"Returns true if `account` can perform the action described by `actionId` in the contract `where`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol\":\"IAuthorizer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol\":{\"keccak256\":\"0x1407e18b806b109e6a878697d2942eeb17bfc6cc601da725941658b90dc9dcc6\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://e2695f5ae435de2de9fa9dc3b165f05b5bf876217aba0e4bcbd20943a23fc831\",\"dweb:/ipfs/QmYTmazrQQqjb4znByMiUUviqbXKTebrhpP8MDERZ5PLxz\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"actionId\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"}],\"name\":\"canPerform\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"canPerform(bytes32,address,address)\":{\"details\":\"Returns true if `account` can perform the action described by `actionId` in the contract `where`.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol\":\"IAuthorizer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@univ3/=lib/v3-periphery/contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/vault/IAuthorizer.sol\":{\"keccak256\":\"0x1407e18b806b109e6a878697d2942eeb17bfc6cc601da725941658b90dc9dcc6\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://e2695f5ae435de2de9fa9dc3b165f05b5bf876217aba0e4bcbd20943a23fc831\",\"dweb:/ipfs/QmYTmazrQQqjb4znByMiUUviqbXKTebrhpP8MDERZ5PLxz\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.21+commit.d9974bed"
+      "version": "0.8.23+commit.f704f362"
     },
     "language": "Solidity",
     "output": {
@@ -101,11 +101,13 @@
         "@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/",
         "@balancerV2/=lib/balancer-v2-monorepo/pkg/",
         "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@univ3/=lib/v3-periphery/contracts/",
         "balancer-v2-monorepo/=lib/balancer-v2-monorepo/",
         "ds-test/=lib/forge-std/lib/ds-test/src/",
         "forge-std/=lib/forge-std/src/",
         "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
-        "std/=lib/forge-std/src/"
+        "std/=lib/forge-std/src/",
+        "v3-periphery/=lib/v3-periphery/contracts/"
       ],
       "optimizer": {
         "enabled": true,

@@ -2,9 +2,11 @@ require('dotenv').config();
 const { ethers } = require('ethers');
 const JSBI = require('jsbi');
 const { TickMath, FullMath } = require('@uniswap/v3-sdk');
+const { abi: QuoterV2ABI } = require(`@uniswap/v3-periphery/artifacts/contracts/lens/QuoterV2.sol`);
 
 const rpc = process.env.PROVIDER_URL;
 const provider = new ethers.JsonRpcProvider(rpc);
+
 
 const tokens = [
 	// {
@@ -43,6 +45,10 @@ const poolsQuick = [
 	'0x479e1b71a702a595e19b6d5932cd5c863ab57ee0', // WMATIC_WETH_QUICKV3
 ];
 
+const quoter2Contract = [
+	`0x61fFE014bA17989E743c5F6cB21bF9697530B21e`, 
+]
+
 async function getUniCurrentTick(poolContract) {
 	const { tick } = await poolContract.slot0();
 	return Number(tick);
@@ -61,6 +67,67 @@ async function getQuickCurrentTick(poolContract) {
 async function getQuickCurrentFee(poolContract) {
 	const { fee } = await poolContract.globalState();
 	return (Number(fee) / 10000);
+}
+
+function sqrtToPrice(sqrtValue, decimals0, decimals1, token0Inputed) {
+	const numerator = sqrtValue ** 2;
+	const denominator = 2 ** 192;
+	let ratio = numerator / denominator;
+	const shiftDecimals = Math.pow(x: 10, y: decimals0 - decimals1);
+	ratio = ratio * shiftDecimals;
+
+	if(!token0Inputed) {
+		ratio = 1 / ratio;
+	}
+
+	return ratio;
+}
+
+
+async function priceImpact(tokenIn, tokenOut, fee, amount) {
+	const poolAddress = poolsUni[0];
+	const poolContract = new ethers.Contract(
+		poolAddress,
+		['function slot0() view returns (uint160 sqrtPriceX96, int24 tick, uint16 observationIndex, uint16 observationCardinality, uint16 observationCardinalityNext, uint16 feeProtocol, bool unlocked)',
+			'function fee() view returns (uint24)'],
+		provider
+	);
+	const poolName = 'Uniswap';
+	const slot0 = await poolContract.slot0();
+	const sqrtPriceX96 = slot0.sqrtPriceX96();
+	const token0 = poolContract.token0();
+	const token1 = poolContract.token1();
+
+	const token0Inputed = tokenIn === token0;
+
+	const quoter = new ethers.Contract(
+		quoter2Contract,
+		QuoterV2ABI,
+		provider,
+
+	)
+	
+	const params = {
+		tokenIn: tokenIn,
+		tokenOut: tokenOut,
+		fee: fee,
+		amount: amount,
+		sqrtPriceLimitX96: `0`, // not using in production
+	}
+	const quote = await quoter.callStatic.quoteExactInputSingle(params); // Important to callStatic for the swap not to be made. 
+	const sqrtPriceX96After = quote.sqrtPriceX96After;
+	const price = sqrtToPrice(sqrtPriceX96, decimalsIn, decimalsOut, token0Inputed)
+	const priceAfter = sqrtToPrice(sqrtPriceX96After, decimalsIn, decimalsOut, token0Inputed)
+
+	console.log(`${poolName} => ${token1.symbol}/${token2.symbol}`);
+	console.log(`price`, price);
+	console.log(`priceAfter`, priceAfter);
+
+	const absoluteChange = price - priceAfter;
+	const percentChange = absoluteChange / price;
+	console.log(`percent change`, (percentChange * 100).toFixed(3),`%`);
+
+
 }
 
 

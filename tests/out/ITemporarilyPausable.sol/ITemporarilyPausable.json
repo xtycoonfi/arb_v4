@@ -50,10 +50,10 @@
   "methodIdentifiers": {
     "getPausedState()": "1c0de051"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"paused\",\"type\":\"bool\"}],\"name\":\"PausedStateChanged\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getPausedState\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"paused\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"pauseWindowEndTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bufferPeriodEndTime\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for the TemporarilyPausable helper.\",\"events\":{\"PausedStateChanged(bool)\":{\"details\":\"Emitted every time the pause state changes by `_setPaused`.\"}},\"kind\":\"dev\",\"methods\":{\"getPausedState()\":{\"details\":\"Returns the current paused state.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol\":\"ITemporarilyPausable\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol\":{\"keccak256\":\"0x7d98e4751329dd9effc016cbc5acdf6399d3592407b9d3e28b38c10c621e56a3\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://a70c4c16829f31c75dd0a3987137ed1572a0343ff933dcdcfbef17d5d63307ae\",\"dweb:/ipfs/QmSGBafawe525NbvK8LVN1rsD2yJxaS83QoTNC84evwM2E\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"paused\",\"type\":\"bool\"}],\"name\":\"PausedStateChanged\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getPausedState\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"paused\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"pauseWindowEndTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bufferPeriodEndTime\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for the TemporarilyPausable helper.\",\"events\":{\"PausedStateChanged(bool)\":{\"details\":\"Emitted every time the pause state changes by `_setPaused`.\"}},\"kind\":\"dev\",\"methods\":{\"getPausedState()\":{\"details\":\"Returns the current paused state.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol\":\"ITemporarilyPausable\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/\",\":@balancerV2/=lib/balancer-v2-monorepo/pkg/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@univ3/=lib/v3-periphery/contracts/\",\":balancer-v2-monorepo/=lib/balancer-v2-monorepo/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":std/=lib/forge-std/src/\",\":v3-periphery/=lib/v3-periphery/contracts/\"]},\"sources\":{\"lib/balancer-v2-monorepo/pkg/interfaces/contracts/solidity-utils/helpers/ITemporarilyPausable.sol\":{\"keccak256\":\"0x7d98e4751329dd9effc016cbc5acdf6399d3592407b9d3e28b38c10c621e56a3\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://a70c4c16829f31c75dd0a3987137ed1572a0343ff933dcdcfbef17d5d63307ae\",\"dweb:/ipfs/QmSGBafawe525NbvK8LVN1rsD2yJxaS83QoTNC84evwM2E\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
-      "version": "0.8.21+commit.d9974bed"
+      "version": "0.8.23+commit.f704f362"
     },
     "language": "Solidity",
     "output": {
@@ -115,11 +115,13 @@
         "@balancer-labs/=lib/balancer-v2-monorepo/../../node_modules/@balancer-labs/",
         "@balancerV2/=lib/balancer-v2-monorepo/pkg/",
         "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@univ3/=lib/v3-periphery/contracts/",
         "balancer-v2-monorepo/=lib/balancer-v2-monorepo/",
         "ds-test/=lib/forge-std/lib/ds-test/src/",
         "forge-std/=lib/forge-std/src/",
         "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
-        "std/=lib/forge-std/src/"
+        "std/=lib/forge-std/src/",
+        "v3-periphery/=lib/v3-periphery/contracts/"
       ],
       "optimizer": {
         "enabled": true,
