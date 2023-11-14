@@ -15,11 +15,12 @@ contract Test_Sample is Test {
     address Quickwmatic =   0x9F1A8cAF3C8e94e43aa64922d67dFf4dc3e88A42;
     address WmaticUsdc =    0xAE81FAc689A1b4b1e06e7ef4a2ab4CD8aC0A087D;
 
-
+    IERC20 public WETH;
     IERC20 public WMATIC;
     IERC20 public LINK;
     IERC20 public USDC;
     IERC20 public QUICK;
+    IERC20 public TEL;
     ArbitrageExecuter public arbitrageExecuter;
 
  
@@ -31,11 +32,17 @@ contract Test_Sample is Test {
         LINK = IERC20(address(0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39));
         USDC = IERC20(address(0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174));
         QUICK = IERC20(address(0xB5C064F955D8e7F38fE0460C556a72987494eE17));
-
+        WETH = IERC20(address(0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619));
+        TEL = IERC20(address(0xdF7837DE1F2Fa4631D716CF2502f8b230F1dcc32));
         console.log("arbitrageExecuter address: ", address(arbitrageExecuter));
+
+  
     }
 
+    
 
+   
+    
     // Naive test to be refactored
    /* function testSwapOut() public {
         deal(address(WMATIC), address(arbitrageExecuter), 1e27);
@@ -52,28 +59,31 @@ contract Test_Sample is Test {
     }     
 */
     function testOp() public {
+                deal(address(WMATIC), address(arbitrageExecuter), 100e18);
+
         bytes memory userData = arbitrageExecuter.encodeUserData(
             address(quickRouter),
-             Quickwmatic, 
-             QUICKusdc, 
-             WmaticUsdc, 
-             658300000000000000, 
-             10e18, 
-             10e18, 
-             1e18
+            address(uniRouter),
+             1e18, 
+             893000, 
+             1e18, 
+             893700
         );
     
         IERC20[] memory erc20List = new IERC20[](1);
         erc20List[0] = WMATIC;
         uint[] memory amounts = new uint[](1);
-        amounts[0] = 1e18;
+        amounts[0] = 100e18;
        
-        deal(address(WMATIC), address(arbitrageExecuter), 1e27);
+        
         arbitrageExecuter.makeFlashLoan(erc20List, amounts, userData);
-        console.log("Quick balance: ", IERC20(QUICK).balanceOf(address(arbitrageExecuter)));
-        if ( IERC20(WMATIC).balanceOf(address(arbitrageExecuter)) > 1e27)  {
-            console.log("Wmatic earnings: ", IERC20(WMATIC).balanceOf(address(arbitrageExecuter)) - 1e27 );
-        }
+
+        console.log("WMATIC earnings: ", IERC20(WMATIC).balanceOf(address(arbitrageExecuter)));
+        console.log("USDC: ", IERC20(USDC).balanceOf(address(arbitrageExecuter)));
+        uint256 am= 1e18 + (1e18 * 5 / 10000);
+        console.log("", IERC20(WMATIC).balanceOf(address(arbitrageExecuter)) + am );
+        
+
     }
 
 
