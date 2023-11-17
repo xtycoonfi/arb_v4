@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.19;
 pragma abicoder v2;
-// deployed on Polygon mainnet at address: 0x78a24Eb6489B6Ea65cE7F6C94aaa7db9024BEdF1
-
+// Contract available at polygon mainnet address : 0x4A469BC7d6fd5e33D3b0109D21f75C6f908670de
 contract QuoterUniQuick {
            
     StaticQuoter public quickQuoter;
     StaticQuoter public uniQuoter;
 
     constructor(){
-      
+        quickQuoter = StaticQuoter(0x2E0A046481c676235B806Bd004C4b492C850fb34);
+        uniQuoter   = StaticQuoter(0x7637Aaeb5BD58269B782726680d83f72C651aE74);
     }
     struct Pair {
         address uniPool;                // Address of the uniswap pool
@@ -29,11 +29,8 @@ contract QuoterUniQuick {
         uint24 uniFee;
         uint16 quickFee;
     }
-
-    function getPoolDatay(Pair[] memory pairs) external view  returns (PairData[] memory, uint){
-        return (_getPoolData(pairs), block.number);
-    }
-    function _getPoolData(Pair[] memory pairs) internal view returns (PairData[] memory){
+    
+    function getPoolData(Pair[] memory pairs) public view returns (PairData[] memory){
         // Initialize PairData array
         PairData[] memory pairData = new PairData[](pairs.length);
         for (uint i; i < pairs.length; ++i){
