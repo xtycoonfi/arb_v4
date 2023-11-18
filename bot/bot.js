@@ -85,21 +85,21 @@ function sqrtToPrice(sqrtValue, decimals0, decimals1, token0Inputed) {
 }
 
 
-async function priceImpact(tokenIn, tokenOut, fee, amount) {
-	const poolAddress = poolsUni[0];
+async function priceImpact(poolAddress, tokenIn, tokenOut, fee, amount) {
+	const pAddress = poolsUni[0];
 	const poolContract = new ethers.Contract(
-		poolAddress,
+		pAddress,
 		['function slot0() view returns (uint160 sqrtPriceX96, int24 tick, uint16 observationIndex, uint16 observationCardinality, uint16 observationCardinalityNext, uint16 feeProtocol, bool unlocked)',
 			'function fee() view returns (uint24)'],
 		provider
 	);
 	const poolName = 'Uniswap';
 	const slot0 = await poolContract.slot0();
-	const sqrtPriceX96 = slot0.sqrtPriceX96();
-	const token0 = poolContract.token0();
-	const token1 = poolContract.token1();
+	const sqrtPriceX96 = slot0.sqrtPriceX96;
+	const token0 = poolContract.token0;
+	const token1 = poolContract.token1;
 
-	const token0Inputed = tokenIn === token[0];
+	const token0Inputed = tokenIn === tokens[0];
 
 	const quoterABI = [
 
@@ -114,16 +114,16 @@ async function priceImpact(tokenIn, tokenOut, fee, amount) {
 	}
 	const quote = await quoter.callStatic.quoteExactInputSingle(params); // Important to callStatic for the swap not to be made. 
 	const sqrtPriceX96After = quote.sqrtPriceX96After;
-	const price = sqrtToPrice(sqrtPriceX96, decimalsIn, decimalsOut, token0Inputed)
+	const priceInitial = sqrtToPrice(sqrtPriceX96, decimalsIn, decimalsOut, token0Inputed)
 	const priceAfter = sqrtToPrice(sqrtPriceX96After, decimalsIn, decimalsOut, token0Inputed)
 
 	console.log(`${poolName} => ${token1.symbol}/${token2.symbol}`);
 	console.log(`price`, price);
 	console.log(`priceAfter`, priceAfter);
 
-	const absoluteChange = price - priceAfter;
-	const percentChange = absoluteChange / price;
-	console.log(`percent change`, (percentChange * 100).toFixed(3),`%`);
+	const absoluteChange = priceInitial - priceAfter;
+	const percentChange = (absoluteChange / priceInitial) * 100;
+	console.log(`percent change`, percentChange.toFixed(3),`%`);
 
 
 }
@@ -189,6 +189,7 @@ async function comparePools() {
 
 		const priceDiff = Math.abs(priceUni - priceQuick);
 		const formattedPriceDiff = priceDiff.toLocaleString(undefined, { minimumFractionDigits: 18, maximumFractionDigits: 18 });
+		const impact = await priceImpact()
 
 		console.log(`Opportunity => Uniswap to Quickswap for ${tokenUni.symbol}/${token2Uni.symbol} pool => ${formattedPriceDiff} ${token2Uni.symbol}/${tokenUni.symbol}`);
 		const blockNumber = await provider.getBlockNumber();
