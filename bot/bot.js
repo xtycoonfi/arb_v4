@@ -2,10 +2,11 @@ require('dotenv').config();
 const { ethers } = require('ethers');
 const JSBI = require('jsbi');
 const { TickMath, FullMath } = require('@uniswap/v3-sdk');
-const { abi: QuoterV2ABI } = require(`@uniswap/v3-periphery/artifacts/contracts/lens/QuoterV2.sol`);
 
 const rpc = process.env.PROVIDER_URL;
-const provider = new ethers.JsonRpcProvider(rpc);
+// const provider = new ethers.JsonRpcProvider(rpc);
+const provider = new ethers.WebSocketProvider(rpc);
+
 
 
 const tokens = [
@@ -73,7 +74,7 @@ function sqrtToPrice(sqrtValue, decimals0, decimals1, token0Inputed) {
 	const numerator = sqrtValue ** 2;
 	const denominator = 2 ** 192;
 	let ratio = numerator / denominator;
-	const shiftDecimals = Math.pow(x: 10, y: decimals0 - decimals1);
+	const shiftDecimals = Math.pow(10, decimals0 - decimals1);
 	ratio = ratio * shiftDecimals;
 
 	if(!token0Inputed) {
@@ -98,14 +99,11 @@ async function priceImpact(tokenIn, tokenOut, fee, amount) {
 	const token0 = poolContract.token0();
 	const token1 = poolContract.token1();
 
-	const token0Inputed = tokenIn === token0;
+	const token0Inputed = tokenIn === token[0];
 
-	const quoter = new ethers.Contract(
-		quoter2Contract,
-		QuoterV2ABI,
-		provider,
+	const quoterABI = [
 
-	)
+	];
 	
 	const params = {
 		tokenIn: tokenIn,
@@ -137,8 +135,15 @@ async function checkPoolPrices(token1, token2, amount, tick, poolName, poolFee) 
 	const token1Amount = JSBI.BigInt(amount * 10 ** token1.decimals);
 	const shift = JSBI.leftShift(JSBI.BigInt(1), JSBI.BigInt(192));
 	const quoteAmount = FullMath.mulDivRoundingUp(ratioX192, token1Amount, shift);
-	console.log(`${poolName} => ${token1.symbol}/${token2.symbol}: ${quoteAmount.toString() / 10 ** token2.decimals} | Pool fee : ${poolFee}%`);
+	const poolFeeInt = Math.floor(poolFee * 100);
+	const feeAmount = FullMath.mulDivRoundingUp(quoteAmount, JSBI.BigInt(poolFeeInt), JSBI.BigInt(100));
+	const quoteMinusFee = JSBI.subtract(quoteAmount, feeAmount);
+	const formattedQuoteAmount = (quoteAmount.toString() / 10 ** token2.decimals).toFixed(15);
+	const formattedQuoteMinusFee = (quoteMinusFee.toString() / 10 ** token2.decimals).toFixed(15);
+	console.log(`${poolName} => ${token1.symbol}/${token2.symbol}: ${formattedQuoteAmount} | Pool fee: ${poolFee}% | ${formattedQuoteMinusFee}`);
+	return formattedQuoteMinusFee;
 }
+
 
 async function checkUniPoolPrices(token1, token2, amount, tick) {
 	const poolAddress = poolsUni[0];
@@ -175,12 +180,19 @@ async function comparePools() {
 		const tokenUni = tokens[0];
 		const token2Uni = tokens[1];
 		const amountUni = 1;
-		await checkUniPoolPrices(tokenUni, token2Uni, amountUni, poolUni);
+		const priceUni = await checkUniPoolPrices(tokenUni, token2Uni, amountUni, poolUni);
 
 		const tokenQuick = tokens[0];
 		const token2Quick = tokens[1];
 		const amountQuick = 1;
-		await checkQuickPoolPrices(tokenQuick, token2Quick, amountQuick, poolQuick);
+		const priceQuick = await checkQuickPoolPrices(tokenQuick, token2Quick, amountQuick, poolQuick);
+
+		const priceDiff = Math.abs(priceUni - priceQuick);
+		const formattedPriceDiff = priceDiff.toLocaleString(undefined, { minimumFractionDigits: 18, maximumFractionDigits: 18 });
+
+		console.log(`Opportunity => Uniswap to Quickswap for ${tokenUni.symbol}/${token2Uni.symbol} pool => ${formattedPriceDiff} ${token2Uni.symbol}/${tokenUni.symbol}`);
+		const blockNumber = await provider.getBlockNumber();
+		console.log('Current Block Number', blockNumber);
 	}
 }
 
